@@ -1,0 +1,210 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Container Styles */
+.container {
+    margin: auto ;
+    padding: 24px ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4rem;
+    width: 100%;
+    background-color: rgb(4 78 131 );
+    position: fixed;
+    z-index: 10;
+    
+    
+  }
+  
+  @media (min-width: 768px) {
+    .container {
+      height: 5rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .container {
+      width: 100%;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .container {
+      width: 100%;
+      
+    }
+  }
+  
+  /* Logo Styles */
+  .logo {
+    margin-top: 3.5rem;
+    width: 70px;
+  }
+  
+  @media (min-width: 640px) {
+    .logo {
+      margin-top: 5rem;
+      width: 80px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .logo {
+      width: 90px;
+    }
+  }
+  
+  /* Heading Styles */
+  .heading {
+    font-weight: 800;
+    color: #a6cae8;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    font-size: 1.125rem;
+  }
+  
+  .heading-lg {
+    display: none;
+    color: #b9d8f3;
+    font-weight: 700;
+  }
+  
+  @media (min-width: 1024px) {
+    .heading-lg {
+      display: block;
+      font-size: 1.25rem;
+    }
+  
+    .heading {
+      display: none;
+    }
+  }
+  
+  /* Navigation Menu */
+  .nav-menu {
+    display: none;
+    align-items: center;
+    gap: 1.25rem;
+    color: #faf9f6;
+
+  }
+  
+  .nav-link {
+    text-transform: capitalize;
+    cursor: pointer;
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline;
+  }
+  
+  @media (min-width: 640px) {
+    .nav-menu {
+      display: flex;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .nav-menu {
+      gap: 2.5rem;
+    }
+  }
+  
+  
+  
+  /* Mobile Menu */
+  .mobile-menu {
+    display: block;
+    cursor: pointer;
+    color: white;
+    
+    /* background-color: rgb(4 78 131 ); */
+
+
+  }
+  .dropdown{
+    margin-top: 90px;
+  }
+  .dropdown .nav-link{
+    border-bottom-width: 1px;
+    border-color: #1468a5;
+    color: white;
+    font-size:medium;
+    margin-bottom: 40px;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 10px;
+  }
+
+  @media (min-width: 640px) {
+    .mobile-menu {
+      display: none;
+    }
+  }
+  
+  @layer base {
+  :root {
+        --background: 0 0% 100%;
+        --foreground: 240 10% 3.9%;
+        --card: 0 0% 100%;
+        --card-foreground: 240 10% 3.9%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 240 10% 3.9%;
+        --primary: 240 5.9% 10%;
+        --primary-foreground: 0 0% 98%;
+        --secondary: 240 4.8% 95.9%;
+        --secondary-foreground: 240 5.9% 10%;
+        --muted: 240 4.8% 95.9%;
+        --muted-foreground: 240 3.8% 46.1%;
+        --accent: 240 4.8% 95.9%;
+        --accent-foreground: 240 5.9% 10%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 240 5.9% 90%;
+        --input: 240 5.9% 90%;
+        --ring: 240 10% 3.9%;
+        --chart-1: 12 76% 61%;
+        --chart-2: 173 58% 39%;
+        --chart-3: 197 37% 24%;
+        --chart-4: 43 74% 66%;
+        --chart-5: 27 87% 67%;
+        --radius: 0.5rem;
+    }
+  .dark {
+        --background: 240 10% 3.9%;
+        --foreground: 0 0% 98%;
+        --card: 240 10% 3.9%;
+        --card-foreground: 0 0% 98%;
+        --popover: 240 10% 3.9%;
+        --popover-foreground: 0 0% 98%;
+        --primary: 0 0% 98%;
+        --primary-foreground: 240 5.9% 10%;
+        --secondary: 240 3.7% 15.9%;
+        --secondary-foreground: 0 0% 98%;
+        --muted: 240 3.7% 15.9%;
+        --muted-foreground: 240 5% 64.9%;
+        --accent: 240 3.7% 15.9%;
+        --accent-foreground: 0 0% 98%;
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 240 3.7% 15.9%;
+        --input: 240 3.7% 15.9%;
+        --ring: 240 4.9% 83.9%;
+        --chart-1: 220 70% 50%;
+        --chart-2: 160 60% 45%;
+        --chart-3: 30 80% 55%;
+        --chart-4: 280 65% 60%;
+        --chart-5: 340 75% 55%;
+    }
+}
+  
+  @layer base {
+  * {
+    @apply border-border;
+    }
+  body {
+    @apply bg-background text-foreground;
+    }
+}
+  
